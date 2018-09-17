@@ -25,6 +25,7 @@ Apple强烈推荐开发者和三方开发者放弃老旧的BSD sockets那套API�
  <li>不同的域名可以被同一个TLS证书覆盖</li>
 </ul>
 ![Alt URLSession](https://github.com/geekxing/myStudy/blob/master/resources/Pasted%20Graphic%2013.jpeg?raw=true "URLSession")
+
 ## 网络优化方面
 #### 网络延迟 Lantency
 现在网络基建设施已经非常完善，所以我们从软件层面上来看，造成网络延迟的主要因素有两个：  
@@ -36,8 +37,9 @@ Apple强烈推荐开发者和三方开发者放弃老旧的BSD sockets那套API�
 ![Alt HTTP/2](https://github.com/geekxing/myStudy/blob/master/resources/Pasted%20Graphic%2014.jpeg?raw=true "HTTP/2")
 HTTP/2的**TCP连接多路复用、设置请求优先级、压缩请求头**优化了网络资源，提高了带宽利用率。
 ![Alt 减少请求数据包的大小](https://github.com/geekxing/myStudy/blob/master/resources/Pasted%20Graphic%2015.jpeg?raw=true "减少请求数据包的大小")
+
 #### 网络响应 Responsiveness
-Qos, network service type, URLSession Adaptable Connectivity 代替 SCReachability
+Qos, network service type, URLSession Adaptable Connectivity 代替 SCReachability       
 #### 充分利用系统资源 System Resources
 <ul>
 <li>大文件传输使用后台sessions</li>
