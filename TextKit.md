@@ -54,7 +54,19 @@ Text Kit处理三种文本属性：字符属性，段落属性和文档属性。
 **View**: UITextView  
 **Controller**: NSLayoutManager  
 ![mvc](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Art/model_view_controller_2x.png)
+### 关于exclusionPaths的原理
+通过继承NSTextContainer，可以使得textView不再是一个规规矩矩的矩形。通过重写NSTextContainer的这个实例方法：  
+
+```
+- (CGRect)lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect:
+```
+这个方法其实是要我们计算出每一行文本的一个frame，然后整个组成一个container的文本绘制区域，所以可想而知如果要描述一个圆形区域也不是那么简单的。  
+我们知道NSTextContainer维护一个UIBezierPath对象数组。 当布局管理器向文本容器发送`lineFragmentRectForProposedRect:atIndex:writingDirection:remainingRect:`消息，原本绘制区域与排除路径定义的某个区域相交时，会返回一个不包括排除区域的调整后的线段矩形。
+
+![Line fragment fitting](https://developer.apple.com/library/archive/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Art/textcontainer_2x.png)
+
+[Demo地址](https://github.com/geekxing/TextKitDemo)
 ### Reference
 [Text Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009542-CH1-SW1)  
-[TextKit WWDC13  Introducing Text Kit](https://developer.apple.com/videos/play/wwdc2013/210/)  
-[TextKit WWDC18 TextKit Best Practices](https://developer.apple.com/videos/play/wwdc2018/221/)
+[WWDC13  Introducing Text Kit](https://developer.apple.com/videos/play/wwdc2013/210/)  
+[WWDC18 TextKit Best Practices](https://developer.apple.com/videos/play/wwdc2018/221/)
