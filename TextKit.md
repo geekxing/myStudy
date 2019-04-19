@@ -10,9 +10,9 @@
 >
 >iOS 7 **Text Kit**  
  
-![ios6text](http://beyondvincent.com/images/2013/11/24.jpg)
+![ios6text](http://beyondvincent.com/images/2013/11/24.jpg)  
 Figure 1  Text Framework before iOS 7
-![textkitDiagram](http://beyondvincent.com/images/2013/11/23.jpg)
+![textkitDiagram](http://beyondvincent.com/images/2013/11/23.jpg)  
 Figure 2  Text Kit Framework Position
 ### 文本属性
 Text Kit处理三种文本属性：字符属性，段落属性和文档属性。
