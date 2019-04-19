@@ -54,3 +54,7 @@ Text Kit处理三种文本属性：字符属性，段落属性和文档属性。
 **View**: UITextView  
 **Controller**: NSLayoutManager  
 ![mvc](https://developer.apple.com/library/archive/documentation/General/Conceptual/DevPedia-CocoaCore/Art/model_view_controller_2x.png)
+### Reference
+[Text Programming Guide for iOS](https://developer.apple.com/library/archive/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009542-CH1-SW1)  
+[TextKit WWDC13  Introducing Text Kit](https://developer.apple.com/videos/play/wwdc2013/210/)  
+[TextKit WWDC18 TextKit Best Practices](https://developer.apple.com/videos/play/wwdc2018/221/)
